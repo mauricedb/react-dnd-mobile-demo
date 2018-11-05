@@ -23,8 +23,6 @@ class DropMe extends Component {
 
 const spec = {
     drop: (props, monitor, component) => {
-        console.log('Dropped')
-
         component.setState({
             isDropped: true,
             when: new Date().toLocaleTimeString()
@@ -34,9 +32,7 @@ const spec = {
 
 function collect(connect, monitor) {
     return {
-        connectDropTarget: connect.dropTarget(),
-        isOver: monitor.isOver(),
-        canDrop: monitor.canDrop(),
+        connectDropTarget: connect.dropTarget()
     };
 }
 

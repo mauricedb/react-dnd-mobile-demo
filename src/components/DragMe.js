@@ -7,19 +7,19 @@ import {
 
 class DragMe extends Component {
   render() {
-    const { connectDragSource, text } = this.props;
+    const { connectDragSource, connectDragPreview, text } = this.props;
 
-    return connectDragSource( <div className="drag-me">
+    return connectDragSource(connectDragPreview( <div className="drag-me">
         { text }
-      </div>
-    );
+      </div>, {offsetX: -20, offsetY: 0 }));
   }
 }
 
 const source = {
-  beginDrag(props, monitor) {
+  beginDrag(props, monitor, component) {
+
     return {
-      renderPreview: () => <DragMe {...props} connectDragSource={o => o} />
+      renderPreview: () => <DragMe {...props} connectDragPreview={o => o} connectDragSource={o => o} />,
     };
   }
 };
@@ -27,7 +27,7 @@ const source = {
 function collect(connect, monitor) {
   return {
     connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging()
+    connectDragPreview: connect.dragPreview()
   };
 }
 

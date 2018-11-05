@@ -16,8 +16,7 @@ import DropMe from './components/DropMe'
 class App extends Component {
   generatePreview(type, item, style) {
     const { renderPreview } = item;
- 
-    return <div style={style}>{ renderPreview() }</div>
+    return <div style={{...style, top: -50}}>{ renderPreview() }</div>
   }
   render() {
     return ( <div className = "App" >
