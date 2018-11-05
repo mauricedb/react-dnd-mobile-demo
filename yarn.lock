@@ -1319,6 +1319,11 @@ atob@^2.1.1:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+autobind-decorator@^2.1.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/autobind-decorator/-/autobind-decorator-2.2.1.tgz#acabfddec272b9c98323dab5dc94f63c61b35855"
+  integrity sha512-XXC/B4Cm5X/Rv8etlFcpxUHdIhcs4U3tf8bsg50gUV8J6kq1Uij25xeBoSeuUwdKs2NMhwy+p9T4VNS8/ujp9w==
+
 autoprefixer@^9.1.5:
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.3.1.tgz#71b622174de2b783d5fd99f9ad617b7a3c78443e"
@@ -7778,6 +7783,16 @@ react-dev-utils@^6.1.1:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
+react-dnd-html5-backend@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-5.0.1.tgz#0b578d79c5c01317c70414c8d717f632b919d4f1"
+  integrity sha1-C1eNecXAExfHBBTI1xf2MrkZ1PE=
+  dependencies:
+    autobind-decorator "^2.1.0"
+    dnd-core "^4.0.5"
+    lodash "^4.17.10"
+    shallowequal "^1.0.2"
+
 react-dnd-multi-backend@^3.1.8:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/react-dnd-multi-backend/-/react-dnd-multi-backend-3.1.8.tgz#19100951f02fb132c38dce33547ca36ccce1c107"
@@ -7793,6 +7808,13 @@ react-dnd-preview@^3.1.8:
   integrity sha512-9gG3h6mlyf6j757xpx8Rc4b3B+8LmhSeoxRKojjoq3ghQKkw7/Pr2GRfzNJPDExI3wVpQ3y+77aIu2NB686WjQ==
   dependencies:
     prop-types "^15.6.2"
+
+react-dnd-touch-backend@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/react-dnd-touch-backend/-/react-dnd-touch-backend-0.5.2.tgz#188759fc941f38bbadc7a7e2a733eccce23434cc"
+  integrity sha512-d7Mgq2D5556Dq70l5ePU3RAY7HLGhioYIoGYan0IWGU3iEMFdpbhdKT4iPaYGNfCseo1610afF3yLvRacv5CLQ==
+  dependencies:
+    invariant "^2.2.4"
 
 react-dnd@^5.0.0:
   version "5.0.0"
