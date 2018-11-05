@@ -15,11 +15,14 @@ import DropMe from './components/DropMe'
 
 class App extends Component {
   generatePreview(type, item, style) {
-    return <div style={style}><DragMe /></div>
+    const { renderPreview } = item;
+ 
+    return <div style={style}>{ renderPreview() }</div>
   }
   render() {
     return ( <div className = "App" >
-        <DragMe / >
+        <DragMe text="Drag me one" / >
+        <DragMe text="Drag me two" / >
         <DropMe / >
         <Preview generator={this.generatePreview} />
       </div>

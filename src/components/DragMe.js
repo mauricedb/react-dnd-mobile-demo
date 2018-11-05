@@ -7,18 +7,20 @@ import {
 
 class DragMe extends Component {
   render() {
-    const { connectDragSource } = this.props;
+    const { connectDragSource, text } = this.props;
 
     return connectDragSource( <div className="drag-me">
-        Drag me
+        { text }
       </div>
     );
   }
 }
 
 const source = {
-  beginDrag(props) {
-    return {};
+  beginDrag(props, monitor) {
+    return {
+      renderPreview: () => <DragMe {...props} connectDragSource={o => o} />
+    };
   }
 };
 
